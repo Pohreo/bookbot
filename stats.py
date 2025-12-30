@@ -1,0 +1,13 @@
+def word_count(book_text):
+    text_count = len(book_text.split())
+    return text_count
+
+def character_count(text):
+    lower_text = text.lower()
+    characters = {}
+    for character in lower_text:
+        if character in characters:
+            characters[character] += 1
+        else: 
+            characters[character] = 1
+    return characters
