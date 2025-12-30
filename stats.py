@@ -11,3 +11,14 @@ def character_count(text):
         else: 
             characters[character] = 1
     return characters
+
+def sorter(s):
+    return s["num"]
+
+def sort_char(text):
+    sort_list = []
+    for k in text:
+        if k.isalpha():
+            sort_list.append({'char':k, 'num':text[k]})
+    sort_list.sort(key=sorter, reverse=True)
+    return sort_list
